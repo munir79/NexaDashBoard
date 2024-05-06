@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 const CoffeCard = ({all}) => {
@@ -15,11 +16,25 @@ const CoffeCard = ({all}) => {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire({
+        // Swal.fire({
+        //   title: "Deleted!",
+        //   text: "Your file has been deleted.",
+        //   icon: "success"
+        // });
+      fetch(`http://localhost:5000/coffe/${_id}`,{
+        method:"DELETE"
+      })
+      .then(res=>res.json())
+      .then(data=>{
+        if(data.deletedCount>0){
+           Swal.fire({
           title: "Deleted!",
-          text: "Your file has been deleted.",
+          text: "Your coffe  has been deleted.",
           icon: "success"
         });
+        }
+      })
+
       }
     });
     }
@@ -40,7 +55,7 @@ const CoffeCard = ({all}) => {
  
     <div className="join space-y-3 join-vertical">
   <button className="btn  join-item">Button</button>
-  <button className="btn join-item">Button</button>
+  <Link to={`/updatecoffe/${_id}`} ><button className="btn join-item">Update</button></Link>
   <button onClick={()=>handleDelete(_id)} className="btn btn-accent join-item">X</button>
 </div>
   
