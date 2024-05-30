@@ -37,8 +37,8 @@ const AddCoffe = () => {
     return (
         <div className="bg-pink-100">
             <div>
-                <h3 className="text-center text-4xl"> Add Coffe </h3>
-                <p className="text-center">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at <br /> its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed <br /> to using Content here.</p>
+                <h3 className="text-center text-4xl"> Add Products </h3>
+               
             </div>
             <div className="p-14">
                 <form onSubmit={handleaddCoffe} >
@@ -46,20 +46,20 @@ const AddCoffe = () => {
                     <div className=" md:flex">
                     <div className="form-control w-1/2">
                         <label className="label">
-                            <span className="label-text font-bold ">Name</span>
+                            <span className="label-text font-bold ">Tittle</span>
                         </label>
                         <label className="input-group">
                             
-                            <input type="text" name="name" placeholder="Enter Coffe Name" className=" w-full input input-bordered" />
+                            <input type="text" name="name" placeholder="Enter Products Name" className=" w-full input input-bordered" />
                         </label>
                     </div>
                     <div className="form-control w-1/2 md:ml-3">
                         <label className="label">
-                            <span className="label-text font-bold">Quantity</span>
+                            <span className="label-text font-bold">Price</span>
                         </label>
                         <label className="input-group">
                             
-                            <input type="text" name="chef" placeholder="Enter Quantity" className=" w-full input input-bordered" />
+                            <input type="text" name="chef" placeholder="Enter Products Price" className=" w-full input input-bordered" />
                         </label>
                     </div>
                     </div>
@@ -67,11 +67,11 @@ const AddCoffe = () => {
                     <div className=" md:flex">
                     <div className="form-control w-1/2">
                         <label className="label">
-                            <span className="label-text font-bold ">Supplier</span>
+                            <span className="label-text font-bold ">Discount</span>
                         </label>
                         <label className="input-group">
                             
-                            <input type="text" name="supplier" placeholder="Enter Coffe Supplier" className=" w-full input input-bordered" />
+                            <input type="text" name="supplier" placeholder="Enter Products Discount" className=" w-full input input-bordered" />
                         </label>
                     </div>
                     <div className="form-control w-1/2 md:ml-3">
@@ -92,16 +92,16 @@ const AddCoffe = () => {
                         </label>
                         <label className="input-group">
                             
-                            <input type="text"  name="catagorey" placeholder="Enter Coffe Catagorey" className=" w-full input input-bordered" />
+                            <input type="text"  name="catagorey" placeholder="Enter Products Catagorey" className=" w-full input input-bordered" />
                         </label>
                     </div>
                     <div className="form-control w-1/2 md:ml-3">
                         <label className="label">
-                            <span className="label-text font-bold">Details</span>
+                            <span className="label-text font-bold">Description </span>
                         </label>
                         <label className="input-group">
                             
-                            <input type="text" name="details" placeholder="Enter Coffe Details" className=" w-full input input-bordered" />
+                            <input type="text" name="details" placeholder="Enter Products Details" className=" w-full input input-bordered" />
                         </label>
                     </div>
                     
@@ -118,7 +118,7 @@ const AddCoffe = () => {
                         </label>
                     </div>
                     </div>
-                    <button className=" bg-orange-400 mt-4 btn btn-block" type="submit">Add Coffe</button>
+                    <button className=" bg-orange-400 mt-4 btn btn-block" type="submit">Add Products</button>
                 </form>
             </div>
         </div>
